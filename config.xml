@@ -100,6 +100,7 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-googlemaps" spec="https://github.com/mapsplugin/cordova-plugin-googlemaps#multiple_maps">
-        <variable name="API_KEY_FOR_ANDROID" value="ADAFSA" />
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAuwf7K_hn-vY0Ea2RtiBR2OEV1o0ousbw" />
     </plugin>
+    <engine name="browser" spec="^5.0.4" />
 </widget>

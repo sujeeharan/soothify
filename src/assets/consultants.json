@@ -1,0 +1,38 @@
+{ "consultants":[
+    {
+        "name": "Sujee",
+        "specialization": "Neuropsychiatry ",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+        "specialization": "Addiction psychiatry",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+        "specialization": "Adolescent and child psychiatry",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+        "specialization": "",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+        "specialization": "",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    }
+]
+}

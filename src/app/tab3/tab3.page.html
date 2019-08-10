@@ -1,9 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+          Choose a place
+        </ion-title>
+      </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
+        <ion-select-option value="Spiritual">Spritual</ion-select-option>
+        <ion-select-option value="Sports">Sports</ion-select-option>
+        <ion-select-option value="Recreational">Recreational</ion-select-option>
+        
+      </ion-select>
+  <div id="map_canvas">
+
+  </div>
+</ion-content>

@@ -6,4 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="psychi">
+          <ion-label>psychiatrist</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="conse">
+          <ion-label>Counselors</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    <ion-list *ngFor="let con of data"> 
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="./avatar-finn.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{con.name}}</h2>
+          <h3>{{con.specialization}}</h3>
+          <p>{{con.qualification}}</p>
+        </ion-label>
+      </ion-item>
+    
+      </ion-list>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-button size="small">App Recommends</ion-button>
+        </ion-fab>
+</ion-content>
