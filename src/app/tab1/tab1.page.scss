@@ -3,10 +3,11 @@
   overflow: hidden;
 }
 
-ion-content{
-  background-image : url('../../assets/mobile-1.jpg')
-}
 
 ion-row{
   flex-wrap: nowrap
+}
+
+ion-content{
+  --background: url(../../assets/imgs/12.jpg)
 }

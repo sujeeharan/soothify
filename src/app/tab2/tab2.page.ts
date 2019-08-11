@@ -9,6 +9,7 @@ import { ConsultantService } from '../consultant-service';
 export class Tab2Page {
 
   con: any;
+  //Injecting Service through Constructor Parameter
   constructor(private consultantService: ConsultantService) {
     this.consultantService.getJSON().subscribe(
       data=> {
