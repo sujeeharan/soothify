@@ -7,17 +7,23 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Mental Health and Psycology</ion-card-subtitle>
-        <ion-card-title>Lets Assess you</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-progress-bar value="0.2"></ion-progress-bar>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+
+    </ion-card-header>
+    <ion-card-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list *ngFor="let question of questions">
+    <ion-item>
+      <p>{{question.ques}}</p>
+      
+    </ion-item>
+  </ion-list>
+
+  <ion-progress-bar value="0.2"></ion-progress-bar>
 
 </ion-content>

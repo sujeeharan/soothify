@@ -1,18 +1,22 @@
-[
-    {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
-        "type": "Depression"
-    },
-    {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
-        "type": "Depression"
-    },
-    {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
-        "type": "Depression"
-    },
-    {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
-        "type": "Depression"
-    }
-]
+{
+    "data": [
+        {
+            "ques": "are you currently feeling overwhelming sadness, grief, hopelessness or irritable mood?"
+        },
+        {
+            "ques": "Do you find it hard to find pleasure in activities those were formally enjoyed?"
+        },
+        {
+            "ques": "Have you lost your apetite or experienced any sudden change in your regular food habits?"
+        },
+        {
+            "ques": "4ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo"
+        },
+        {
+            "ques": "5ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo"
+        },
+        {
+            "ques": "6ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo"
+        }
+    ]
+}

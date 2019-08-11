@@ -1,0 +1,82 @@
+{
+    "data": [
+        {
+            "type": "Depression",
+            "questions": [
+                {
+                    "question": "1ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                },
+                {
+                    "question": "2m dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                }
+            ]
+        },
+        {
+            "type": "Anxiety",
+            "questions": [
+                {
+                    "question": "3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                },
+                {
+                    "question": "4Sncirty ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                }
+            ]
+        },
+        {
+            "type": "Depression",
+            "questions": [
+                {
+                    "question": "Sncirty ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                },
+                {
+                    "question": "Sncirty ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+                    "type": "Depression"
+                }
+            ]
+        }
+    ]
+}
+
+
+<div>
+        <ion-row>
+          <ion-radio-group>
+            <ion-col size="3">
+              <ion-label>Never</ion-label>
+              <ion-radio></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Fewtimes</ion-label>
+              <ion-radio></ion-radio>
+            </ion-col>
+            <ion-col size="3">
+              <ion-label>Often</ion-label>
+              <ion-radio></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Always</ion-label>
+              <ion-radio></ion-radio>
+            </ion-col>
+          </ion-radio-group>
+        </ion-row>
+      </div>
+
+      are you currently feeling overwhelming sadness, grief, hopelessness or irritable mood?
+
+      Do you find it hard to find pleasure in activities those were formally enjoyed?
+
+      Have you lost your apetite or experienced any sudden change in your regular food habits?
+
+      Do you find it difficult to concentrate focus properly alongside forgetfullness or noticiable slowing of moments?
+
+      Are you experiencing mood swings? 
+
+      were you being impacted with physical issues such as headache, fatigue, digestive problems or any sort of physical unfitness?
+
+      Do you feel thoughts about unworthiness, selfharm or either suicide?
+      

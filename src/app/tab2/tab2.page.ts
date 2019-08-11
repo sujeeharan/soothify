@@ -8,17 +8,33 @@ import { ConsultantService } from '../consultant-service';
 })
 export class Tab2Page {
 
-  constructor(private consultantService: ConsultantService) {}
+  con: any;
+  constructor(private consultantService: ConsultantService) {
+    this.consultantService.getJSON().subscribe(
+      data=> {
+        this.data = data.psychiatrist;
+      }
+    )
+  }
   data: any;
 
   segmentChanged(ev:any) {
-    if(ev.value=="psychi"){
+    console.log(ev.detail.value);
+    if(ev.detail.value=="psychi"){
+      this.consultantService.getJSON().subscribe(
+        data => {
+          this.data = data.psychiatrist;
+        }
+      );
+      console.log(this.data)
+    }
+    else{
+      
       this.consultantService.getJSON().subscribe(
         data => {
           this.data = data.consultants;
         }
       );
-      console.log(this.data)
     }
     
   }

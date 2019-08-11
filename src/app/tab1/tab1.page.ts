@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsultantService } from '../consultant-service';
+import { QuestionsService } from '../questions.service';
 
 
 @Component({
@@ -11,15 +12,17 @@ export class Tab1Page implements OnInit {
 
   data: any;
 
+  
   ngOnInit() {
-    this.consultantService.getJSON().subscribe(data => {
-      this.data = data;
+    this.questionsService.getJSON().subscribe(data => {
+      this.questions = data.data;
+      console.log(data);
   });
 }
 
   questions : any[];
 
-  constructor(private consultantService : ConsultantService ) {
+  constructor(private questionsService : QuestionsService ) {
     
   }
   

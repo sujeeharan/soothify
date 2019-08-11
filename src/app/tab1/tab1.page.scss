@@ -2,3 +2,11 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-content{
+  background-image : url('../../assets/mobile-1.jpg')
+}
+
+ion-row{
+  flex-wrap: nowrap
+}
