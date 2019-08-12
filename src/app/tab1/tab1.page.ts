@@ -12,23 +12,22 @@ export class Tab1Page implements OnInit {
 
   data: any;
 
-  
-  ngOnInit() {
-    this.questionsService.getJSON().subscribe(data => {
-      this.questions = data.data;
-      console.log(data);
-  });
-}
-
   questions : any[];
 
   checkedQuestion: Array<BigInteger>;
 
   scoreMap = new Map();
-
-
   
   totalScore=0;
+  
+  ngOnInit() {
+    this.questionsService.getJSON().subscribe(data => {
+      this.questions = data.data;
+      console.log(data);
+      
+  });
+}
+
 
   constructor(private questionsService : QuestionsService ) {
     
@@ -53,7 +52,10 @@ export class Tab1Page implements OnInit {
       this.totalScore=this.totalScore+value;
       console.log(value);
     }
-    console.log(this.totalScore)
+    console.log(this.totalScore);
+
   }
+
+
 
 }
