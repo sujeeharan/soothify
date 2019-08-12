@@ -6,8 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card class="welcome-card">
+<ion-content padding>
+  <!-- <ion-card class="welcome-card">
     <ion-card-header>
 
     </ion-card-header>
@@ -16,14 +16,24 @@
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.</p>
     </ion-card-content>
-  </ion-card>
-  <ion-list *ngFor="let question of questions">
-    <ion-item>
-      <p>{{question.ques}}</p>
-      
-    </ion-item>
+  </ion-card> -->
+  <ion-list *ngFor="let question of questions; let i = index">
+    <ion-radio-group>
+      <ion-list-header>
+        {{question.ques}}
+      </ion-list-header>
+      <ion-label>Never</ion-label>
+      <ion-radio value="0" (ionSelect)="addScores(i,0)"></ion-radio>
+      <ion-label>Fewtimes</ion-label>
+      <ion-radio value="2" (ionSelect)="addScores(i,2)"></ion-radio>
+      <ion-label>Often</ion-label>
+      <ion-radio value="4" (ionSelect)="addScores(i,4)"></ion-radio>
+      <ion-label>Always</ion-label>
+      <ion-radio value="6" (ionSelect)="addScores(i,6)"></ion-radio>
+    </ion-radio-group>
+    
   </ion-list>
-
+  <ion-button expand="block" (click)="calculate()">Move to Next!</ion-button>
   <ion-progress-bar value="0.2"></ion-progress-bar>
 
 </ion-content>

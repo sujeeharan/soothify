@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Tab1Page } from './tab1/tab1.page';
 import { HomepagePage } from './homepage/homepage.page';
 import { TabsPage } from './tabs/tabs.page';
+import { Tab2Page } from './tab2/tab2.page';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.rootPage = Tab1Page;
+      this.rootPage = Tab2Page;
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
