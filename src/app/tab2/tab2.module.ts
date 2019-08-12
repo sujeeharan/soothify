@@ -7,6 +7,7 @@ import { Tab2Page } from './tab2.page';
 import { ConsultantService } from '../consultant-service';
 import { QuestionsService } from '../questions.service';
 import { HttpClient } from '@angular/common/http';
+import { RecommendationComponent } from '../recommendation/recommendation.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HttpClient } from '@angular/common/http';
     RouterModule.forChild([{ path: '', component: Tab2Page }]),
     
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page,RecommendationComponent],
+  entryComponents: [RecommendationComponent]
 })
 export class Tab2PageModule {}

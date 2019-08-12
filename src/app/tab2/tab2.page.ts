@@ -45,7 +45,7 @@ export class Tab2Page {
     const modal = await this.modalCtrl.create({
       component: RecommendationComponent,
       componentProps: {
-        data: this.data.psychiatrist
+        data: this.data
       }
     })
     await modal.present();
