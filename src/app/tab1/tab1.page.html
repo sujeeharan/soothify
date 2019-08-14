@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- <ion-card class="welcome-card">
+  <ion-card class="welcome-card" [hidden]=ishidden>
     <ion-card-header>
 
     </ion-card-header>
@@ -16,24 +16,39 @@
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.</p>
     </ion-card-content>
-  </ion-card> -->
-  <ion-list *ngFor="let question of questions; let i = index">
-    <ion-radio-group>
-      <ion-list-header>
-        {{question.ques}}
-      </ion-list-header>
-      <ion-label>Never</ion-label>
-      <ion-radio value="0" (ionSelect)="addScores(i,0)"></ion-radio>
-      <ion-label>Fewtimes</ion-label>
-      <ion-radio value="2" (ionSelect)="addScores(i,2)"></ion-radio>
-      <ion-label>Often</ion-label>
-      <ion-radio value="4" (ionSelect)="addScores(i,4)"></ion-radio>
-      <ion-label>Always</ion-label>
-      <ion-radio value="6" (ionSelect)="addScores(i,6)"></ion-radio>
-    </ion-radio-group>
-    
-  </ion-list>
+  </ion-card>
+  <ion-card [hidden]=personalDetails>
+      <ion-card-header>
+          Enter the details
+        </ion-card-header>
+        <ion-card-content>
+          <ion-input placeholder="Name"></ion-input>
+          <ion-input type="number" min=10 max=75 placeholder="Age"></ion-input>
+          <ion-input placeholder="Something"></ion-input>
+          <ion-button (click)="enterDetails()">Submit</ion-button>
+        </ion-card-content>
+    </ion-card>
+
+  <div [hidden]=questionsHide>
+    <ion-list *ngFor="let question of questions; let i = index">
+      <ion-radio-group>
+        <ion-list-header>
+          {{question.ques}}
+        </ion-list-header>
+        <ion-label>Never</ion-label>
+        <ion-radio value="0" (ionSelect)="addScores(i,0)"></ion-radio>
+        <ion-label>Fewtimes</ion-label>
+        <ion-radio value="2" (ionSelect)="addScores(i,2)"></ion-radio>
+        <ion-label>Often</ion-label>
+        <ion-radio value="4" (ionSelect)="addScores(i,4)"></ion-radio>
+        <ion-label>Always</ion-label>
+        <ion-radio value="6" (ionSelect)="addScores(i,6)"></ion-radio>
+      </ion-radio-group>
+
+    </ion-list>
+  
   <ion-button expand="block" (click)="calculate()">Move to Next!</ion-button>
-  <ion-progress-bar value="0.2"></ion-progress-bar>
+  <ion-progress-bar value={{progress}}></ion-progress-bar>
+</div>
 
 </ion-content>
