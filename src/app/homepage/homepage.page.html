@@ -1,4 +1,35 @@
+<ion-header>
+        <ion-toolbar  >
+          <ion-buttons slot="start">
+            <!-- <ion-back-button></ion-back-button> -->
+            <ion-icon name="pulse" size="large" color="danger"></ion-icon>
+          </ion-buttons>
+          <ion-title  style="font-size: 14px" color="primary">Home</ion-title>
+        </ion-toolbar>
+      </ion-header>
 
-<ion-content [routerLink]="['/tabs']" routerDirection="forward" class="backgroundImage" > 
+<ion-content> 
+    <ion-card  class="h-f">
+        <!-- <ion-card-header>
+            <ion-card-title style="text-align: center">
+              <ion-label style="font-weight: 700">
+               <p>Welcome to Soophify</p> 
+            </ion-label>  
+            </ion-card-title>
+        </ion-card-header> -->
+
+ <img src="/assets/imgs/home.jpg"/>
+    </ion-card>
+
+    <ion-list style="text-align: center ; margin-top: 30px ">
+        <ion-grid>
+            <ion-row>
+                <ion-col style="text-align: center">
+                        <ion-button [routerLink]="['/tabs']" routerDirection="forward" expand="block" style="width: 95%" >Let's start ...</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+</ion-list>
+  
 
 </ion-content>
