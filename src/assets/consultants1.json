@@ -1,0 +1,76 @@
+{ "consultants":[
+    {
+        "name": "Dr. Jayan Mendis",
+        "specialization": "Neuropsychiatry ",
+        "qualification": "MBBS, MD (Psych)",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Dr. Venura Palihawadana",
+        "specialization": "Addiction psychiatry",
+        "qualification": "MD(Psych)",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Dr. Iyanthika Medagama",
+        "specialization": "Adolescent and child psychiatry",
+        "qualification": "MD, FSLCPsych, FRCPsych)",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Dr. Ravimal Galappaththi",
+        "specialization": "Psychotherapy",
+        "qualification": "MRCPsych(uk)",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Dr. Dasanthi Akmeemana",
+        "specialization": "Geriatric psychiatry.",
+        "qualification": "MBBS",
+        "Experience":8,
+        "rating": "2" 
+    }
+],
+"psychiatrist":[
+    {
+        "name": "Mr. Madura Gunawardana",
+        "specialization": "Counseling Psychologist ",
+        "qualification": "Msc in Clinical Psychology( Costa Rica ), MSc in Psychology and Counselling( India )",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Mrs.Thilini Manohari",
+        "specialization": "Personality problems Relationships & Marriage",
+        "qualification": "BSc(psy)India",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Mr. Matt Broadway-Horner",
+        "specialization": "Addictions,Depression",
+        "qualification": "Counseling Psychologist, Psychotherapist",
+        "Experience": 8,
+        "rating": "2" 
+    },
+    {
+        "name": "Ms. Rukshana Thahir",
+        "specialization": "Family Problems,Learning Difficulties",
+        "qualification": "Child Psychologist, Counseling Psychologist, Music Therapist",
+        "Experience":8,
+        "rating": "2" 
+    },
+    {
+        "name": "Mr. Beppe Pedron",
+        "specialization": "Adult psychological development,Anger Management",
+        "qualification": "Guidance Counselor, Youth Counselor",
+        "Experience":8,
+        "rating": "2" 
+    }
+]
+
+}
