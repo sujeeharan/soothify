@@ -15,7 +15,11 @@ export class QuestionsService {
    }
 
    public getJSON(): Observable<any> {
-     return this.http.get("./assets/questions.json");
+     return this.http.get("http://127.0.0.1:5000/questions/");
+   }
+
+   public postAnswers(answer): Observable<any> {
+     return this.http.post("http://127.0.0.1:5000/submit/", {ans : answer})
    }
 
 }

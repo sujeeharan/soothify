@@ -19,11 +19,18 @@ export class Tab1Page implements OnInit {
 
   scoreMap = new Map();
 
+  personalMap = new Map();
+
   totalScore = 0;
+  personalTotal=0;
+
+  answer = '';
+  personalDisorder : any[] = [];
   
   ishidden =false;
   questionsHide = true;
   personalDetails = true;
+  personalDisorderHide = true;
 
   ngOnInit() {
     this.questionsService.getJSON().subscribe(data => {
@@ -51,6 +58,10 @@ export class Tab1Page implements OnInit {
     console.log(this.scoreMap);
   }
 
+  addScores1(question, score) {
+    this.personalDisorder[question] = score;
+  }
+
   calculate() {
     this.totalScore = 0
 
@@ -58,8 +69,23 @@ export class Tab1Page implements OnInit {
       this.totalScore = this.totalScore + value;
       console.log(value);
     })
-    console.log(this.totalScore);
+    if(this.totalScore>21){
+      this.showPersonal();
+    }  
+  }
 
+  calculate1() {
+    this.questionsService.postAnswers(this.personalDisorder).subscribe(
+      answer => console.log(answer)
+    )
+  }
+
+  showPersonal(){
+    this.questionsHide=true;
+    this.personalDisorderHide=false;
+    for (var i = 0; i < 15; i++) {
+      this.personalDisorder[i]=0;
+    }
   }
 
   hidePopup(){
@@ -79,5 +105,10 @@ export class Tab1Page implements OnInit {
     this.questionsHide = false;
   }
 
+  submitAnswer(){
+    this.questionsService.postAnswers(this.personalDisorder)
+      .subscribe(val => this.answer = val);
+
+  }
 
 }

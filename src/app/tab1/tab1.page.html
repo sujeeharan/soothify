@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-   
-    <ion-title  style="font-size: 14px">
+
+    <ion-title style="font-size: 14px">
       Questions
       <span>
-          <ion-icon name="help" color="danger"></ion-icon>
+        <ion-icon name="help" color="danger"></ion-icon>
       </span>
     </ion-title>
   </ion-toolbar>
@@ -18,35 +18,37 @@
     </ion-card-header>
     <ion-card-content>
       <p> Welcome!
-        Have no worries.Soothify feels you and it will always stick with you no matter what, by providing immediate relief and guidance out of any problem.You are never alone as Soothify will be your trusted soulmate to always count on :).</p>
+        Have no worries.Soothify feels you and it will always stick with you no matter what, by providing immediate
+        relief and guidance out of any problem.You are never alone as Soothify will be your trusted soulmate to always
+        count on :).</p>
     </ion-card-content>
   </ion-card>
   <!-- will be hidden on button click -->
   <ion-card [hidden]=personalDetails>
-      <ion-card-header>
-          Enter the details
-        </ion-card-header>
-        <ion-card-content>
-          <!-- <ion-input placeholder="Name"></ion-input>
+    <ion-card-header>
+      Enter the details
+    </ion-card-header>
+    <ion-card-content>
+      <!-- <ion-input placeholder="Name"></ion-input>
           <ion-input type="number" min=10 max=75 placeholder="Age"></ion-input>
           <ion-input placeholder="Something"></ion-input>
           <ion-button (click)="enterDetails()">Submit</ion-button> -->
-          <ion-item>
-              <ion-label position="floating">Name</ion-label>
-              <ion-input></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label position="floating" type="number">Age</ion-label>
-                <ion-input></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label position="floating">Description</ion-label>
-                  <ion-input></ion-input>
-                </ion-item>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" type="number">Age</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
-                <ion-button (click)="enterDetails()">Submit</ion-button>
-        </ion-card-content>
-    </ion-card>
+      <ion-button (click)="enterDetails()">Submit</ion-button>
+    </ion-card-content>
+  </ion-card>
 
   <div [hidden]=questionsHide>
     <!-- <ion-list *ngFor="let question of questions; let i = index">
@@ -66,49 +68,91 @@
 
     </ion-list> -->
     <ion-item *ngFor="let question of questions; let i = index">
-        <ion-list>
-            <ion-grid>
-              <ion-row>
-                <ion-col>
-                  {{i+1 }}.  {{question.ques}}
-                </ion-col>
-              </ion-row>
-              <ion-row >
-                <ion-col>
-                    <ion-label>Never</ion-label>
-                    <ion-radio value="0" (ionSelect)="addScores(i,0)"></ion-radio>
-                </ion-col>
-                <ion-col>
-                    <ion-label>Fewtimes</ion-label>
-                    <ion-radio value="2" (ionSelect)="addScores(i,2)"></ion-radio>
-                </ion-col>
-                <ion-col>
-                    <ion-label>Often</ion-label>
-                    <ion-radio value="4" (ionSelect)="addScores(i,4)"></ion-radio>
-                </ion-col>
-                <ion-col>
-                    <ion-label>Always</ion-label>
-                    <ion-radio value="6" (ionSelect)="addScores(i,6)"></ion-radio>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-list>
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              {{i+1}}. {{question.ques}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-label>Never</ion-label>
+              <ion-radio value="0" (ionSelect)="addScores(i,0)"></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Fewtimes</ion-label>
+              <ion-radio value="2" (ionSelect)="addScores(i,2)"></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Often</ion-label>
+              <ion-radio value="4" (ionSelect)="addScores(i,4)"></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Always</ion-label>
+              <ion-radio value="6" (ionSelect)="addScores(i,6)"></ion-radio>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
     </ion-item>
 
     <ion-list>
-        <ion-grid>
-            <ion-row >
-                <ion-col style="text-align: center">
-                    <ion-button  expand="block" (click)="calculate()" style="width: 80% ; text-align: center">Move to Next 
-                        <ion-icon name="fastforward"></ion-icon>
-                      </ion-button>
-                </ion-col>
-              </ion-row>
-        </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col style="text-align: center">
+            <ion-button expand="block" (click)="calculate()" style="width: 80% ; text-align: center">Move to Next
+              <ion-icon name="fastforward"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-list>
 
 
-  <!-- <ion-progress-bar value={{progress}}></ion-progress-bar> -->
-</div>
+    <!-- <ion-progress-bar value={{progress}}></ion-progress-bar> -->
+  </div>
+
+
+  <div [hidden]=personalDisorderHide>
+    <ion-item *ngFor="let question of questions; let i = index">
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              {{i+1 }}. {{question.ques}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="0" (ionSelect)="addScores1(i,0)"></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>No</ion-label>
+              <ion-radio value="1" (ionSelect)="addScores1(i,1)"></ion-radio>
+            </ion-col>
+            <ion-col>
+              <ion-label>Can't Say</ion-label>
+              <ion-radio value="2" (ionSelect)="addScores1(i,2)"></ion-radio>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    </ion-item>
+
+      <ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col style="text-align: center">
+              <ion-button expand="block" (click)="calculate1()" style="width: 80% ; text-align: center">Move to Next
+                <ion-icon name="fastforward"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+    
+  </div>
 
 </ion-content>
